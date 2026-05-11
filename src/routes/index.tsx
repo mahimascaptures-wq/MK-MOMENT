@@ -9,7 +9,7 @@ import bk9 from "@/assets/bk9.jpeg"
 import bk7 from "@/assets/bk7.jpeg"
 import bk3 from "@/assets/bk3.jpeg"
 
-import { Heart, MapPin, Film, Quote, Sparkles, ArrowRight, Camera, UtensilsCrossed } from "lucide-react";
+import { Heart, MapPin, Film, Quote, Sparkles, ArrowRight, Camera, UtensilsCrossed, Video } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -133,9 +133,10 @@ function Home() {
 
       {/* Quick links */}
       <section className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {[
             { to: "/travel", icon: MapPin, label: "Places We've Been" },
+            { to: "/videos", icon: Video, label: "Our Videos" },
             { to: "/movies", icon: Film, label: "Favorite Movies" },
             { to: "/food", icon: UtensilsCrossed, label: "Food Diaries" },
             { to: "/memories", icon: Heart, label: "Memory Gallery" },

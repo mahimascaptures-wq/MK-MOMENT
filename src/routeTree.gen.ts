@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VideosRouteImport } from './routes/videos'
 import { Route as TravelRouteImport } from './routes/travel'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as QuotesRouteImport } from './routes/quotes'
@@ -19,6 +20,11 @@ import { Route as FoodRouteImport } from './routes/food'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VideosRoute = VideosRouteImport.update({
+  id: '/videos',
+  path: '/videos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TravelRoute = TravelRouteImport.update({
   id: '/travel',
   path: '/travel',
@@ -75,6 +81,7 @@ export interface FileRoutesByFullPath {
   '/quotes': typeof QuotesRoute
   '/thank-you': typeof ThankYouRoute
   '/travel': typeof TravelRoute
+  '/videos': typeof VideosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -86,6 +93,7 @@ export interface FileRoutesByTo {
   '/quotes': typeof QuotesRoute
   '/thank-you': typeof ThankYouRoute
   '/travel': typeof TravelRoute
+  '/videos': typeof VideosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +106,7 @@ export interface FileRoutesById {
   '/quotes': typeof QuotesRoute
   '/thank-you': typeof ThankYouRoute
   '/travel': typeof TravelRoute
+  '/videos': typeof VideosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +120,7 @@ export interface FileRouteTypes {
     | '/quotes'
     | '/thank-you'
     | '/travel'
+    | '/videos'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -122,6 +132,7 @@ export interface FileRouteTypes {
     | '/quotes'
     | '/thank-you'
     | '/travel'
+    | '/videos'
   id:
     | '__root__'
     | '/'
@@ -133,6 +144,7 @@ export interface FileRouteTypes {
     | '/quotes'
     | '/thank-you'
     | '/travel'
+    | '/videos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -145,10 +157,18 @@ export interface RootRouteChildren {
   QuotesRoute: typeof QuotesRoute
   ThankYouRoute: typeof ThankYouRoute
   TravelRoute: typeof TravelRoute
+  VideosRoute: typeof VideosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/videos': {
+      id: '/videos'
+      path: '/videos'
+      fullPath: '/videos'
+      preLoaderRoute: typeof VideosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/travel': {
       id: '/travel'
       path: '/travel'
@@ -225,6 +245,7 @@ const rootRouteChildren: RootRouteChildren = {
   QuotesRoute: QuotesRoute,
   ThankYouRoute: ThankYouRoute,
   TravelRoute: TravelRoute,
+  VideosRoute: VideosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

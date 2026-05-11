@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Film, Music, Play } from "lucide-react";
+import { Film, Music, Play, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/movies")({
   head: () => ({
@@ -35,21 +35,36 @@ const categories = [
   },
 ];
 
-const songs = [
-  "Bairan",
-  "Teri Ore",
-  "Ektara",
-  "Gajar",
-  "Hum Tere Pyar Mein",
-  "Itna Na Mujhse Tu Pyar Badha",
-  "Hona Tha Pyar",
-  "Darkhaast",
-  "Yaaron — KK",
-  "Tere Jaisa Yaar Kahan",
-  "Phir Se Ud Chala",
-  "Kabira",
-  "Kun Faya Kun",
-  "Yeh Dosti — Sholay",
+type Song = { name: string; movie?: string; q: string };
+
+// Build a YouTube search URL — opens the song in a new tab.
+const yt = (q: string) =>
+  `https://www.youtube.com/results?search_query=${encodeURIComponent(q + " song")}`;
+
+const songs: Song[] = [
+  { name: "Ab Tumsa Jahaan Mein Koi Nahi Hai", q: "Ab Tumsa Jahan Mein Koi Nahi" },
+  { name: "Neela Gagan Ke Deewane", q: "Neela Gagan Ke Deewane" },
+  { name: "Darkhaast", movie: "Shivaay", q: "Darkhaast Shivaay Arijit Singh" },
+  { name: "Tumse Hi", movie: "Jab We Met", q: "Tumse Hi Jab We Met Mohit Chauhan" },
+  { name: "Saason Ki Maala Pe Simru Main Pi Ka Naam", q: "Saason Ki Mala Pe Simru" },
+  { name: "Teri Ore", movie: "Singh Is Kinng", q: "Teri Ore Singh Is Kinng" },
+  { name: "Ektara", movie: "Wake Up Sid", q: "Ektara Wake Up Sid" },
+  { name: "Dekhe Dekhe Sheesha Sharmaye", q: "Dekhe Dekhe Re Sheesha" },
+  { name: "Kiska Hai Yeh Tumko Intezaar", movie: "Main Hoon Na", q: "Tumhe Jo Maine Dekha Main Hoon Na" },
+  { name: "Phir Le Aaya Dil", movie: "Barfi", q: "Phir Le Aya Dil Barfi Arijit" },
+  { name: "Hothon Se Chhu Lo Tum", movie: "Prem Geet", q: "Hothon Se Chhu Lo Tum Jagjit Singh" },
+  { name: "Kun Faya Kun", movie: "Rockstar", q: "Kun Faya Kun Rockstar" },
+  { name: "Yeh Dooriyan", movie: "Love Aaj Kal", q: "Yeh Dooriyan Love Aaj Kal Mohit Chauhan" },
+  { name: "Bairan", q: "Bairan song" },
+  { name: "Gajar", q: "Gajar song" },
+  { name: "Hum Tere Pyar Mein", q: "Hum Tere Pyar Mein" },
+  { name: "Itna Na Mujhse Tu Pyar Badha", q: "Itna Na Mujhse Tu Pyar Badha" },
+  { name: "Hona Tha Pyar", movie: "Bol", q: "Hona Tha Pyar Atif Aslam" },
+  { name: "Yaaron", movie: "KK", q: "Yaaron KK" },
+  { name: "Tere Jaisa Yaar Kahan", q: "Tere Jaisa Yaar Kahan Yaarana" },
+  { name: "Phir Se Ud Chala", movie: "Rockstar", q: "Phir Se Ud Chala Rockstar Mohit" },
+  { name: "Kabira", movie: "Yeh Jawaani Hai Deewani", q: "Kabira Yeh Jawaani Hai Deewani" },
+  { name: "Yeh Dosti", movie: "Sholay", q: "Yeh Dosti Hum Nahin Todenge Sholay" },
 ];
 
 function Movies() {
@@ -89,17 +104,47 @@ function Movies() {
         <div className="p-8 md:p-10 rounded-3xl gradient-rose text-white shadow-glow">
           <div className="flex items-center gap-3">
             <Music className="w-8 h-8" />
-            <h2 className="font-display text-3xl md:text-4xl font-bold">Our Friendship Playlist</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold">
+              Our Friendship Playlist
+            </h2>
           </div>
-          <p className="mt-2 text-white/90">Hit play on any memory — it has a song attached to it.</p>
+          <p className="mt-2 text-white/90">
+            Tap any song — it'll open on YouTube and play instantly. 🎵
+          </p>
           <ol className="mt-6 grid sm:grid-cols-2 gap-3">
             {songs.map((s, i) => (
-              <li key={s} className="p-4 rounded-xl bg-white/15 backdrop-blur-sm flex items-center gap-3">
-                <span className="font-script text-2xl w-8">{i + 1}</span>
-                <span className="font-medium">{s}</span>
+              <li key={s.name}>
+                <a
+                  href={yt(s.q)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Play ${s.name} on YouTube`}
+                  className="group relative p-4 rounded-xl bg-white/15 backdrop-blur-sm flex items-center gap-3 hover:bg-white/30 transition-all hover:-translate-y-0.5 cursor-pointer"
+                >
+                  <span className="font-script text-2xl w-8 shrink-0 opacity-80 group-hover:opacity-100">
+                    {i + 1}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-medium leading-tight truncate">
+                      {s.name}
+                    </div>
+                    {s.movie && (
+                      <div className="text-xs text-white/75 italic truncate">
+                        — {s.movie}
+                      </div>
+                    )}
+                  </div>
+                  <div className="shrink-0 w-9 h-9 rounded-full bg-white/20 group-hover:bg-white/40 flex items-center justify-center transition">
+                    <Play className="w-4 h-4 text-white fill-white ml-0.5" />
+                  </div>
+                  <ExternalLink className="absolute top-2 right-2 w-3 h-3 text-white/60 group-hover:text-white/90 transition" />
+                </a>
               </li>
             ))}
           </ol>
+          <p className="mt-5 text-xs text-white/70 text-center">
+            Each song opens in a new tab on YouTube.
+          </p>
         </div>
       </section>
     </Layout>

@@ -36,6 +36,21 @@ import bk11 from "@/assets/bk11.jpeg";
 import bk12 from "@/assets/bk12.jpeg";
 import bk13 from "@/assets/bk13.jpeg";
 
+import mkNew from "@/assets/new/mk-new.jpeg";
+import mkNew1 from "@/assets/new/mk-new1.jpeg";
+import mkNew2 from "@/assets/new/mk-new2.jpeg";
+import mkNew3 from "@/assets/new/mk-new3.jpeg";
+import mkNew4 from "@/assets/new/mk-new4.jpeg";
+import mkNew5 from "@/assets/new/mk-new5.jpeg";
+import mkNew6 from "@/assets/new/mk-new6.jpeg";
+import mkNew7 from "@/assets/new/mk-new7.jpeg";
+import mkNew8 from "@/assets/new/mk-new8.jpeg";
+import mkNew9 from "@/assets/new/mk-new9.jpeg";
+import mkNew10 from "@/assets/new/mk-new10.jpeg";
+import mkNew11 from "@/assets/new/mk-new11.jpeg";
+import mkNew12 from "@/assets/new/mk-new12.jpeg";
+import mkNew13 from "@/assets/new/mk-new13.jpeg";
+
 export const Route = createFileRoute("/photos")({
   head: () => ({
     meta: [
@@ -78,6 +93,20 @@ const photos: Photo[] = [
   { img: bk9,   location: "Just us",           caption: "When the road feels like a friend too.", fit: "contain" },
   { img: mk,    location: "Indore",            caption: "A simple click that became a forever favourite.", fit: "contain" },
 
+  { img: mkNew,    location: "New Memories",   caption: "Fresh clicks, same smiles — making memories all over again.", fit: "contain" },
+  { img: mkNew1,   location: "Just Us",        caption: "That look — soft, silent, and full of meaning.", fit: "contain" },
+  { img: mkNew2,   location: "Soft Moments",   caption: "Tiny moments that quietly become the most important ones.", fit: "contain" },
+  { img: mkNew3,   location: "Together",       caption: "Together feels like the safest place I know.", fit: "contain" },
+  { img: mkNew4,   location: "Happy Hours",    caption: "Some days, just being with you is the whole plan.", fit: "contain" },
+  { img: mkNew5,   location: "Candid",         caption: "Unplanned click, perfectly us.", fit: "contain" },
+  { img: mkNew6,   location: "Smile File",     caption: "Saving this smile for all the bad days.", fit: "contain" },
+  { img: mkNew7,   location: "Golden Hour",    caption: "Soft light, soft hearts — golden hour magic.", fit: "contain" },
+  { img: mkNew8,   location: "Comfort",        caption: "You are my comfort place — no other definition needed.", fit: "contain" },
+  { img: mkNew9,   location: "Little Things",  caption: "Small clicks, big memories — that's our love language.", fit: "contain" },
+  { img: mkNew10,  location: "Bestie Mode",    caption: "Bestie mode: always ON.", fit: "contain" },
+  { img: mkNew11,  location: "Forever Frame",  caption: "Some frames you'd want to keep forever — this is one.", fit: "contain" },
+  { img: mkNew12,  location: "Pure Joy",       caption: "Pure happiness, no filter needed.", fit: "contain" },
+  { img: mkNew13,  location: "Our Story",      caption: "Adding one more page to our forever story.", fit: "contain" },
 ];
 
 function Lightbox({ photo, onClose }: { photo: Photo; onClose: () => void }) {
