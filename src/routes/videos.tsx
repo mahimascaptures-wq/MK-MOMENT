@@ -15,6 +15,7 @@ import vmk8 from "@/assets/videos/vmk8.mp4";
 import vmk9 from "@/assets/videos/vmk9.mp4";
 import vmk10 from "@/assets/videos/vmk10.mp4";
 import vmk11 from "@/assets/videos/vmk11.mp4";
+import vmk12 from "@/assets/videos/vmk12.mp4";
 
 
 export const Route = createFileRoute("/videos")({
@@ -38,6 +39,7 @@ type Clip = {
 };
 
 const clips: Clip[] = [
+  { src: vmk12, title: "Fresh frame", caption: "A brand new memory, freshly captured." },
   { src: vmk11, title: "@cup chay", caption: "HUm tum kitne." },
   { src: vmk, title: "Our little world", caption: "A moment that says everything without saying a word." },
   { src: vmk1, title: "Random masti", caption: "Cameras rolling, laughter unstoppable." },

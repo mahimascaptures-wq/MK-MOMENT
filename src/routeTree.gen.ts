@@ -17,6 +17,7 @@ import { Route as PhotosRouteImport } from './routes/photos'
 import { Route as MoviesRouteImport } from './routes/movies'
 import { Route as MemoriesRouteImport } from './routes/memories'
 import { Route as FoodRouteImport } from './routes/food'
+import { Route as AudioRouteImport } from './routes/audio'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -60,6 +61,11 @@ const FoodRoute = FoodRouteImport.update({
   path: '/food',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AudioRoute = AudioRouteImport.update({
+  id: '/audio',
+  path: '/audio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -74,6 +80,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/audio': typeof AudioRoute
   '/food': typeof FoodRoute
   '/memories': typeof MemoriesRoute
   '/movies': typeof MoviesRoute
@@ -86,6 +93,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/audio': typeof AudioRoute
   '/food': typeof FoodRoute
   '/memories': typeof MemoriesRoute
   '/movies': typeof MoviesRoute
@@ -99,6 +107,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/audio': typeof AudioRoute
   '/food': typeof FoodRoute
   '/memories': typeof MemoriesRoute
   '/movies': typeof MoviesRoute
@@ -113,6 +122,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/audio'
     | '/food'
     | '/memories'
     | '/movies'
@@ -125,6 +135,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/audio'
     | '/food'
     | '/memories'
     | '/movies'
@@ -137,6 +148,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/audio'
     | '/food'
     | '/memories'
     | '/movies'
@@ -150,6 +162,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AudioRoute: typeof AudioRoute
   FoodRoute: typeof FoodRoute
   MemoriesRoute: typeof MemoriesRoute
   MoviesRoute: typeof MoviesRoute
@@ -218,6 +231,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FoodRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/audio': {
+      id: '/audio'
+      path: '/audio'
+      fullPath: '/audio'
+      preLoaderRoute: typeof AudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -238,6 +258,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AudioRoute: AudioRoute,
   FoodRoute: FoodRoute,
   MemoriesRoute: MemoriesRoute,
   MoviesRoute: MoviesRoute,

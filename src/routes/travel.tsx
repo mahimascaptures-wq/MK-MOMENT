@@ -153,20 +153,7 @@ function Travel() {
       </section>
 
       {/* Dream destinations */}
-      <section className="max-w-5xl mx-auto px-4 mt-20">
-        <div className="p-10 rounded-[2rem] gradient-sunset text-white">
-          <div className="flex items-center gap-3">
-            <Plane className="w-8 h-8" />
-            <h2 className="font-display text-3xl md:text-4xl font-bold">Future Dream Destinations</h2>
-          </div>
-          <p className="mt-2 text-white/90">The list keeps growing. So does the excitement.</p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {dreams.map((d) => (
-              <span key={d} className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30">{d}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {active && <Lightbox place={active} onClose={() => setActive(null)} />}
     </Layout>

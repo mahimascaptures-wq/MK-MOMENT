@@ -8,6 +8,7 @@ const links = [
   { to: "/about", label: "About Us" },
   { to: "/photos", label: "Photos" },
   { to: "/videos", label: "Videos" },
+  { to: "/audio", label: "Audio" },
   { to: "/memories", label: "Memories" },
   { to: "/travel", label: "Travel" },
   { to: "/movies", label: "Movies" },
