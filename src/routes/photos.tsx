@@ -21,6 +21,7 @@ import kshyam from "@/assets/kshyam.jpg";
 import pcmall from "@/assets/pc-mall.jpg";
 import dhaba from "@/assets/dhaba.jpg";
 
+import both from "@/assets/both.jpeg";
 import bk from "@/assets/bk.jpeg";
 import bk1 from "@/assets/bk1.jpeg";
 import bk2 from "@/assets/bk2.jpeg";
@@ -69,6 +70,7 @@ type Photo = {
 };
 
 const photos: Photo[] = [
+  { img: both,     location: "Dressed up, together",   caption: "The two of us, side by side — a forever favourite frame.", fit: "contain" },
   { img: bk13,     location: "Our beginning",          caption: "Where every story of ours quietly began." },
   { img: mk1,      location: "Indore streets",         caption: "Random walks, random laughs — perfectly us." },
 

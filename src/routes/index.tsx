@@ -7,7 +7,8 @@ import heroImg3 from "@/assets/mk3.jpeg";
 import bk13 from "@/assets/bk13.jpeg";
 import bk9 from "@/assets/bk9.jpeg"
 import bk7 from "@/assets/bk7.jpeg"
-import bk3 from "@/assets/bk3.jpeg"
+import both from "@/assets/both.jpeg"
+
 
 import { Heart, MapPin, Film, Quote, Sparkles, ArrowRight, Camera, UtensilsCrossed, Video, Music } from "lucide-react";
 
@@ -22,14 +23,12 @@ export const Route = createFileRoute("/")({
 });
 
 const snapshots = [
+  { img: both, caption: "the two of us, always" },
   { img: heroImg1, caption: "the smile that started it all" },
-  { img: bk13,  caption: "Love" },
-  { img: heroImg,  caption: "random walks, random laughs" },
-  { img: bk9,  caption: "Love...." },
-  { img: bk7,  caption: "Love...." },
-  { img: bk3,  caption: "Love...." },
-
-  
+  { img: bk13, caption: "Love" },
+  { img: heroImg, caption: "random walks, random laughs" },
+  { img: bk9, caption: "Love...." },
+  { img: bk7, caption: "Love...." },
   { img: heroImg2, caption: "sunset skies & soft hearts" },
   { img: heroImg3, caption: "late drives, endless talks" },
 ];
