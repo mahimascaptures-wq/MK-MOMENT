@@ -103,8 +103,7 @@ function Login() {
             welcome back
           </p>
           <p className="mt-3 text-sm text-white/70 text-center max-w-xs">
-            Login karke andar aao — yeh humari personal jagah hai, sirf hum
-            dono ke liye.
+           Moments
           </p>
         </div>
 
