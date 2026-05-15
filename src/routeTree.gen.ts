@@ -16,6 +16,7 @@ import { Route as QuotesRouteImport } from './routes/quotes'
 import { Route as PhotosRouteImport } from './routes/photos'
 import { Route as MoviesRouteImport } from './routes/movies'
 import { Route as MemoriesRouteImport } from './routes/memories'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as FoodRouteImport } from './routes/food'
 import { Route as AudioRouteImport } from './routes/audio'
 import { Route as AboutRouteImport } from './routes/about'
@@ -56,6 +57,11 @@ const MemoriesRoute = MemoriesRouteImport.update({
   path: '/memories',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FoodRoute = FoodRouteImport.update({
   id: '/food',
   path: '/food',
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/audio': typeof AudioRoute
   '/food': typeof FoodRoute
+  '/login': typeof LoginRoute
   '/memories': typeof MemoriesRoute
   '/movies': typeof MoviesRoute
   '/photos': typeof PhotosRoute
@@ -95,6 +102,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/audio': typeof AudioRoute
   '/food': typeof FoodRoute
+  '/login': typeof LoginRoute
   '/memories': typeof MemoriesRoute
   '/movies': typeof MoviesRoute
   '/photos': typeof PhotosRoute
@@ -109,6 +117,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/audio': typeof AudioRoute
   '/food': typeof FoodRoute
+  '/login': typeof LoginRoute
   '/memories': typeof MemoriesRoute
   '/movies': typeof MoviesRoute
   '/photos': typeof PhotosRoute
@@ -124,6 +133,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/audio'
     | '/food'
+    | '/login'
     | '/memories'
     | '/movies'
     | '/photos'
@@ -137,6 +147,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/audio'
     | '/food'
+    | '/login'
     | '/memories'
     | '/movies'
     | '/photos'
@@ -150,6 +161,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/audio'
     | '/food'
+    | '/login'
     | '/memories'
     | '/movies'
     | '/photos'
@@ -164,6 +176,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AudioRoute: typeof AudioRoute
   FoodRoute: typeof FoodRoute
+  LoginRoute: typeof LoginRoute
   MemoriesRoute: typeof MemoriesRoute
   MoviesRoute: typeof MoviesRoute
   PhotosRoute: typeof PhotosRoute
@@ -224,6 +237,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MemoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/food': {
       id: '/food'
       path: '/food'
@@ -260,6 +280,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AudioRoute: AudioRoute,
   FoodRoute: FoodRoute,
+  LoginRoute: LoginRoute,
   MemoriesRoute: MemoriesRoute,
   MoviesRoute: MoviesRoute,
   PhotosRoute: PhotosRoute,

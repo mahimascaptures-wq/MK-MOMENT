@@ -1,7 +1,8 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { Logo } from "./Logo";
 import { useEffect, useState } from "react";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, LogOut } from "lucide-react";
+import { signOut } from "@/lib/auth";
 
 const links = [
   { to: "/", label: "Home" },
@@ -18,12 +19,18 @@ const links = [
 ] as const;
 
 export function Header() {
+  const navigate = useNavigate();
   const [dark, setDark] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
   }, [dark]);
+
+  const handleLogout = () => {
+    signOut();
+    navigate({ to: "/login", replace: true });
+  };
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/50">
@@ -50,6 +57,14 @@ export function Header() {
             {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
           <button
+            onClick={handleLogout}
+            aria-label="Logout"
+            title="Logout"
+            className="p-2 rounded-full text-foreground/70 hover:text-rose-600 hover:bg-rose-100 transition-colors"
+          >
+            <LogOut className="w-5 h-5" />
+          </button>
+          <button
             className="lg:hidden p-2 rounded-full hover:bg-secondary"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
@@ -71,6 +86,15 @@ export function Header() {
               {l.label}
             </Link>
           ))}
+          <button
+            onClick={() => {
+              setOpen(false);
+              handleLogout();
+            }}
+            className="px-3 py-2 rounded-lg text-left text-rose-600 hover:bg-rose-100 transition-colors flex items-center gap-2 mt-2 border-t border-border pt-3"
+          >
+            <LogOut className="w-4 h-4" /> Logout
+          </button>
         </nav>
       )}
     </header>
