@@ -52,6 +52,13 @@ import mkNew11 from "@/assets/new/mk-new11.jpeg";
 import mkNew12 from "@/assets/new/mk-new12.jpeg";
 import mkNew13 from "@/assets/new/mk-new13.jpeg";
 
+import new1_1 from "@/assets/new1/new1-1.jpeg";
+import new1_2 from "@/assets/new1/new1-2.jpeg";
+import new1_3 from "@/assets/new1/new1-3.jpeg";
+import new1_4 from "@/assets/new1/new1-4.jpeg";
+import new1_5 from "@/assets/new1/new1-5.jpeg";
+import new1_6 from "@/assets/new1/new1-6.jpeg";
+
 export const Route = createFileRoute("/photos")({
   head: () => ({
     meta: [
@@ -70,6 +77,7 @@ type Photo = {
 };
 
 const photos: Photo[] = [
+  { img: new1_4,   location: "Soft Smiles",    caption: "Smiles that make ordinary days feel special.", fit: "contain" },
   { img: both,     location: "Dressed up, together",   caption: "The two of us, side by side — a forever favourite frame.", fit: "contain" },
   { img: bk13,     location: "Our beginning",          caption: "Where every story of ours quietly began." },
   { img: mk1,      location: "Indore streets",         caption: "Random walks, random laughs — perfectly us." },
@@ -109,6 +117,12 @@ const photos: Photo[] = [
   { img: mkNew11,  location: "Forever Frame",  caption: "Some frames you'd want to keep forever — this is one.", fit: "contain" },
   { img: mkNew12,  location: "Pure Joy",       caption: "Pure happiness, no filter needed.", fit: "contain" },
   { img: mkNew13,  location: "Our Story",      caption: "Adding one more page to our forever story.", fit: "contain" },
+
+  { img: new1_1,   location: "Fresh Frames",   caption: "A new click added to our forever album.", fit: "contain" },
+  { img: new1_2,   location: "Sweet Times",    caption: "Some moments quietly become the favourite ones.", fit: "contain" },
+  { img: new1_3,   location: "Together Always",caption: "Side by side, just the way it should be.", fit: "contain" },
+  { img: new1_5,   location: "Little Joys",    caption: "Tiny clicks, big happiness — that's our story.", fit: "contain" },
+  { img: new1_6,   location: "Forever Mood",   caption: "Pure us — captured in one frame.", fit: "contain" },
 ];
 
 function Lightbox({ photo, onClose }: { photo: Photo; onClose: () => void }) {

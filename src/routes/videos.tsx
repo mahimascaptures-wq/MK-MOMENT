@@ -17,6 +17,10 @@ import vmk10 from "@/assets/videos/vmk10.mp4";
 import vmk11 from "@/assets/videos/vmk11.mp4";
 import vmk12 from "@/assets/videos/vmk12.mp4";
 
+import videoIndore1 from "@/assets/new1/video-indore1.mp4";
+import videoIndore2 from "@/assets/new1/video-indore2.mp4";
+import videoTeams from "@/assets/new1/video-teams.mp4";
+
 
 export const Route = createFileRoute("/videos")({
   head: () => ({
@@ -39,6 +43,9 @@ type Clip = {
 };
 
 const clips: Clip[] = [
+  { src: videoIndore1, title: "Indore diaries", caption: "Indore ki galiyon mein, dono saath — yeh moment hamesha yaad rahega." },
+  { src: videoIndore2, title: "Indore — take two", caption: "Ek aur clip jo Indore ke us din ki kahani sunaata hai." },
+  { src: videoTeams, title: "Caught on screen", caption: "Ek tiny moment jo screen ke uss paar bhi yaad reh gaya." },
   { src: vmk12, title: "Fresh frame", caption: "A brand new memory, freshly captured." },
   { src: vmk11, title: "@cup chay", caption: "HUm tum kitne." },
   { src: vmk, title: "Our little world", caption: "A moment that says everything without saying a word." },

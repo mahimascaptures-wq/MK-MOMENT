@@ -19,6 +19,8 @@ import mk3Img from "@/assets/mk3.jpeg";
 import bkImg from "@/assets/bk.jpeg";
 import bk5Img from "@/assets/bk5.jpeg";
 
+import mangoMastaniImg from "@/assets/new1/mango-mastani.jpeg";
+
 export const Route = createFileRoute("/memories")({
   head: () => ({
     meta: [
