@@ -182,11 +182,11 @@ function Login() {
           )}
         </button>
 
-        <p className="mt-6 text-center font-script text-lg text-amber-300/90 flex items-center justify-center gap-1.5">
+        {/* <p className="mt-6 text-center font-script text-lg text-amber-300/90 flex items-center justify-center gap-1.5">
           made with{" "}
           <Heart className="w-4 h-4 inline fill-rose-400 text-rose-400" /> just
           for us
-        </p>
+        </p> */}
       </form>
     </div>
   );
