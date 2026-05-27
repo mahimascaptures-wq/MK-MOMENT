@@ -45,6 +45,7 @@ const polaroids: Polaroid[] = [
   { caption: "Lotus Valley day out", color: "from-lime-300 to-green-500", img: vellyImg },
   { caption: "Mahavatar Narsimha", color: "from-violet-300 to-fuchsia-500", img: narsimhaImg },
   { caption: "burger as a sorry", color: "from-yellow-300 to-orange-400", img: dhabaImg },
+  { caption: "mango mastani date", color: "from-amber-300 to-yellow-500", img: mangoMastaniImg },
   { caption: "Phoenix Citadel mall", color: "from-rose-300 to-pink-500", img: pcMallImg },
   { caption: "Khatu Shyam blessings", color: "from-indigo-300 to-purple-500", img: kshyamImg },
   { caption: "Dewas — Tekri sunrise", color: "from-fuchsia-300 to-purple-500", img: dewasImg },

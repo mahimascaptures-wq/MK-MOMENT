@@ -123,6 +123,11 @@ const songs: Song[] = [
     q: "Kabira Yeh Jawaani Hai Deewani",
   },
   { name: "Yeh Dosti", movie: "Sholay", q: "Yeh Dosti Hum Nahin Todenge Sholay" },
+  {
+    name: "Kali Teri Choti Hai Paranda Tera Lal Ni",
+    movie: "Pati Patni Aur Woh Do",
+    q: "Kali Teri Choti Hai Paranda Tera Lal Ni Guru Randhawa Pati Patni Aur Woh Do",
+  },
 ];
 
 function Audio() {

@@ -17,7 +17,7 @@ const categories = [
   {
     title: "Our Favourite Watches",
     color: "from-rose-400 to-red-500",
-    items: ["Chhawa", "Mahavatar Narsimha", "Sita Ramam", "Border", "Kesari 2 (1.5 hrs)", "Bhool Chuk Maaf"],
+    items: ["Chhawa", "Mahavatar Narsimha", "Sita Ramam", "Border", "Kesari 2 (1.5 hrs)", "Bhool Chuk Maaf", "Pati Patni Aur Woh Do"],
   },
   // {
   //   title: "Action & Thrill",
