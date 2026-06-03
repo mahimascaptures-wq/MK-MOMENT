@@ -21,6 +21,14 @@ import videoIndore1 from "@/assets/new1/video-indore1.mp4";
 import videoIndore2 from "@/assets/new1/video-indore2.mp4";
 import videoTeams from "@/assets/new1/video-teams.mp4";
 
+import videoNew from "@/assets/videos/new/video-new.mp4";
+import videoNew1 from "@/assets/videos/new/video-new1.mp4";
+import videoNew2 from "@/assets/videos/new/video-new2.mp4";
+import videoNew3 from "@/assets/videos/new/video-new3.mp4";
+import videoNew4 from "@/assets/videos/new/video-new4.mp4";
+import videoNew5 from "@/assets/videos/new/video-new5.mp4";
+import videoNew6 from "@/assets/videos/new/video-new6.mp4";
+import videoNew7 from "@/assets/videos/new/video-new7.mp4";
 
 export const Route = createFileRoute("/videos")({
   head: () => ({
@@ -59,6 +67,15 @@ const clips: Clip[] = [
   { src: vmk8, title: "Cute fight", caption: "Even our nok-jhok looks like masti." },
   { src: vmk9, title: "Lazy afternoon", caption: "Slow day, full heart." },
   { src: vmk10, title: "Forever frame", caption: "If memory had a video, it would look like this." },
+
+  { src: videoNew,  title: "New Memory 1", caption: "A beautiful moment we couldn't let slip away." },
+  { src: videoNew1, title: "New Memory 2", caption: "Another little chapter in our story." },
+  { src: videoNew2, title: "Happy Times", caption: "Simple moments that turned into precious memories." },
+  { src: videoNew3, title: "Together", caption: "Because every memory feels better together." },
+  { src: videoNew4, title: "Golden Moments", caption: "A clip full of smiles and good vibes." },
+  { src: videoNew5, title: "Just Us", caption: "Nothing special, yet everything special." },
+  { src: videoNew6, title: "Favourite Clip", caption: "One of those videos you'll watch again and again." },
+  { src: videoNew7, title: "Forever Memory", caption: "Saving this moment for all the years ahead." },
 ];
 
 function VideoLightbox({ clip, onClose }: { clip: Clip; onClose: () => void }) {

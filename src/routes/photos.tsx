@@ -59,6 +59,22 @@ import new1_4 from "@/assets/new1/new1-4.jpeg";
 import new1_5 from "@/assets/new1/new1-5.jpeg";
 import new1_6 from "@/assets/new1/new1-6.jpeg";
 
+import new2_1 from "@/assets/new2/new2-1.jpeg";
+import new2_2 from "@/assets/new2/new2-2.jpeg";
+import new2_3 from "@/assets/new2/new2-3.jpeg";
+import new2_4 from "@/assets/new2/new2-4.jpeg";
+import new2_5 from "@/assets/new2/new2-5.jpeg";
+import new2_6 from "@/assets/new2/new2-6.jpeg";
+import new2_7 from "@/assets/new2/new2-7.jpeg";
+import new2_8 from "@/assets/new2/new2-8.jpeg";
+import new2_9 from "@/assets/new2/new2-9.jpeg";
+import new2_10 from "@/assets/new2/new2-10.jpeg";
+import new2_11 from "@/assets/new2/new2-11.jpeg";
+import new2_12 from "@/assets/new2/new2-12.jpeg";
+import new2_13 from "@/assets/new2/new2-13.jpeg";
+import new2_14 from "@/assets/new2/new2-14.jpeg";
+
+
 export const Route = createFileRoute("/photos")({
   head: () => ({
     meta: [
@@ -78,7 +94,12 @@ type Photo = {
 
 const photos: Photo[] = [
   { img: new1_4,   location: "Soft Smiles",    caption: "Smiles that make ordinary days feel special.", fit: "contain" },
+  { img: new2_11, location: "Forever Album",    caption: "Saving this memory for a lifetime.", fit: "contain" },
+
   { img: both,     location: "Dressed up, together",   caption: "The two of us, side by side — a forever favourite frame.", fit: "contain" },
+  { img: new2_9,  location: "Us Again",         caption: "Same people, new memories, endless smiles.", fit: "contain" },
+  { img: new2_5,  location: "Memory Lane",      caption: "Moments pass, memories stay forever.", fit: "contain" },
+
   { img: bk13,     location: "Our beginning",          caption: "Where every story of ours quietly began." },
   { img: mk1,      location: "Indore streets",         caption: "Random walks, random laughs — perfectly us." },
 
@@ -123,7 +144,23 @@ const photos: Photo[] = [
   { img: new1_3,   location: "Together Always",caption: "Side by side, just the way it should be.", fit: "contain" },
   { img: new1_5,   location: "Little Joys",    caption: "Tiny clicks, big happiness — that's our story.", fit: "contain" },
   { img: new1_6,   location: "Forever Mood",   caption: "Pure us — captured in one frame.", fit: "contain" },
-];
+ 
+  { img: new2_1,  location: "Pizza party",      caption: "Another beautiful memory added to our collection.", fit: "contain" },
+  { img: new2_2,  location: "Happy Moments",    caption: "A smile that deserves a place in our album.", fit: "contain" },
+  { img: new2_3,  location: "Togetherness",     caption: "Every picture feels complete when we're together.", fit: "contain" },
+  { img: new2_4,  location: "Special Click",    caption: "One frame, countless emotions.", fit: "contain" },
+  { img: new2_6,  location: "Pure Happiness",   caption: "A little snapshot of a happy day.", fit: "contain" },
+  { img: new2_10, location: "Beautiful Days",   caption: "A reminder of how lovely simple moments can be.", fit: "contain" },
+
+  { img: new2_7,  location: "Favourite Frame",  caption: "Some photos instantly become favourites.", fit: "contain" },
+  { img: new2_8,  location: "Golden Memories",  caption: "Collecting moments, one click at a time.", fit: "contain" },
+  { img: new2_12,  location: "happiness",  caption: "happiness.", fit: "contain" },
+  { img: new2_13,  location: "ride",  caption: "ride.", fit: "contain" },
+  { img: new2_14,  location: "Memories",  caption: "Memories.", fit: "contain" },
+
+  
+]
+;
 
 function Lightbox({ photo, onClose }: { photo: Photo; onClose: () => void }) {
   useEffect(() => {
