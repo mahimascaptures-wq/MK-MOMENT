@@ -8,6 +8,8 @@ import bk13 from "@/assets/bk13.jpeg";
 import bk9 from "@/assets/bk9.jpeg"
 import bk7 from "@/assets/bk7.jpeg"
 import both from "@/assets/both.jpeg"
+import heroImg4 from "@/assets/new2/atha/atha1.jpeg";
+
 
 
 import { Heart, MapPin, Film, Quote, Sparkles, ArrowRight, Camera, UtensilsCrossed, Video, Music } from "lucide-react";

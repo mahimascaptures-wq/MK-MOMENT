@@ -74,6 +74,13 @@ import new2_12 from "@/assets/new2/new2-12.jpeg";
 import new2_13 from "@/assets/new2/new2-13.jpeg";
 import new2_14 from "@/assets/new2/new2-14.jpeg";
 
+import atha from "@/assets/new2/atha/atha.jpeg";
+import atha1 from "@/assets/new2/atha/atha1.jpeg";
+import atha2 from "@/assets/new2/atha/atha2.jpeg";
+import atha3 from "@/assets/new2/atha/atha3.jpeg";
+import atha4 from "@/assets/new2/atha/atha4.jpeg";
+import atha5 from "@/assets/new2/atha/atha5.jpeg";
+import atha6 from "@/assets/new2/atha/atha6.jpeg";
 
 export const Route = createFileRoute("/photos")({
   head: () => ({
@@ -93,74 +100,83 @@ type Photo = {
 };
 
 const photos: Photo[] = [
-  { img: new1_4,   location: "Soft Smiles",    caption: "Smiles that make ordinary days feel special.", fit: "contain" },
-  { img: new2_11, location: "Forever Album",    caption: "Saving this memory for a lifetime.", fit: "contain" },
+  { img: atha3, location: "Sukoon", caption: "Moments to remember.", fit: "contain" },
 
-  { img: both,     location: "Dressed up, together",   caption: "The two of us, side by side — a forever favourite frame.", fit: "contain" },
-  { img: new2_9,  location: "Us Again",         caption: "Same people, new memories, endless smiles.", fit: "contain" },
-  { img: new2_5,  location: "Memory Lane",      caption: "Moments pass, memories stay forever.", fit: "contain" },
+  { img: new1_4, location: "Soft Smiles", caption: "Smiles that make ordinary days feel special.", fit: "contain" },
+  { img: new2_11, location: "Forever Album", caption: "Saving this memory for a lifetime.", fit: "contain" },
 
-  { img: bk13,     location: "Our beginning",          caption: "Where every story of ours quietly began." },
-  { img: mk1,      location: "Indore streets",         caption: "Random walks, random laughs — perfectly us." },
 
-  { img: bk4,   location: "Best One",        caption: "Best with fav person." },
+  { img: both, location: "Dressed up, together", caption: "The two of us, side by side — a forever favourite frame.", fit: "contain" },
+  { img: new2_9, location: "Us Again", caption: "Same people, new memories, endless smiles.", fit: "contain" },
+  { img: atha1, location: "Memories", caption: "Cherished moments.", fit: "contain" },
 
-  { img: mk2,      location: "Sunset evening",         caption: "Sky in colours, hearts at peace." },
-  { img: mk3,      location: "Late night drive",       caption: "Music low, talks endless, soul full." },
-   { img: kshyam,   location: "Khatu Shyam",            caption: "Folded hands, same wish — best friends, forever." },
-  
-  { img: bk,    location: "Bike Diaries",      caption: "Two wheels, two best friends, one endless road." },
-  { img: bk1,   location: "Bike Diaries",      caption: "Helmet on, smile bigger — ready for the road." },
-  { img: bk2,   location: "Morning Vibe",      caption: "Morning vibe with closest person." },
-  { img: bk6,   location: "Open roads",        caption: "Highways, hill curves and us — perfect combo." },
-  { img: bk3,   location: "Random stop",       caption: "Random pause, big smile — that's how we travel." },
- 
-  { img: bk7,   location: "Pit stop",          caption: "Petrol stop that turned into a photo session." },
-  { img: bk8,   location: "Sunset ride",       caption: "Sunset, helmet hair and one happy click." },
-  { img: bk10,  location: "Mini break",        caption: "Pause, breathe, click — repeat." },
-  { img: bk11,  location: "Side roads",        caption: "Tiny detours that became favourite memories.", fit: "contain" },
-  { img: bk12,  location: "Best Pal",          caption: "Click before we ride — our little ritual.", fit: "contain" },
-  { img: bk5,   location: "Pillion view",      caption: "Best seat in the world — right behind him.", fit: "contain" },
-  { img: bk9,   location: "Just us",           caption: "When the road feels like a friend too.", fit: "contain" },
-  { img: mk,    location: "Indore",            caption: "A simple click that became a forever favourite.", fit: "contain" },
+  { img: new2_5, location: "Memory Lane", caption: "Moments pass, memories stay forever.", fit: "contain" },
 
-  { img: mkNew,    location: "New Memories",   caption: "Fresh clicks, same smiles — making memories all over again.", fit: "contain" },
-  { img: mkNew1,   location: "Just Us",        caption: "That look — soft, silent, and full of meaning.", fit: "contain" },
-  { img: mkNew2,   location: "Soft Moments",   caption: "Tiny moments that quietly become the most important ones.", fit: "contain" },
-  { img: mkNew3,   location: "Together",       caption: "Together feels like the safest place I know.", fit: "contain" },
-  { img: mkNew4,   location: "Happy Hours",    caption: "Some days, just being with you is the whole plan.", fit: "contain" },
-  { img: mkNew5,   location: "Candid",         caption: "Unplanned click, perfectly us.", fit: "contain" },
-  { img: mkNew6,   location: "Smile File",     caption: "Saving this smile for all the bad days.", fit: "contain" },
-  { img: mkNew7,   location: "Golden Hour",    caption: "Soft light, soft hearts — golden hour magic.", fit: "contain" },
-  { img: mkNew8,   location: "Comfort",        caption: "You are my comfort place — no other definition needed.", fit: "contain" },
-  { img: mkNew9,   location: "Little Things",  caption: "Small clicks, big memories — that's our love language.", fit: "contain" },
-  { img: mkNew10,  location: "Bestie Mode",    caption: "Bestie mode: always ON.", fit: "contain" },
-  { img: mkNew11,  location: "Forever Frame",  caption: "Some frames you'd want to keep forever — this is one.", fit: "contain" },
-  { img: mkNew12,  location: "Pure Joy",       caption: "Pure happiness, no filter needed.", fit: "contain" },
-  { img: mkNew13,  location: "Our Story",      caption: "Adding one more page to our forever story.", fit: "contain" },
+  { img: bk13, location: "Our beginning", caption: "Where every story of ours quietly began." },
+  { img: mk1, location: "Indore streets", caption: "Random walks, random laughs — perfectly us." },
 
-  { img: new1_1,   location: "Fresh Frames",   caption: "A new click added to our forever album.", fit: "contain" },
-  { img: new1_2,   location: "Sweet Times",    caption: "Some moments quietly become the favourite ones.", fit: "contain" },
-  { img: new1_3,   location: "Together Always",caption: "Side by side, just the way it should be.", fit: "contain" },
-  { img: new1_5,   location: "Little Joys",    caption: "Tiny clicks, big happiness — that's our story.", fit: "contain" },
-  { img: new1_6,   location: "Forever Mood",   caption: "Pure us — captured in one frame.", fit: "contain" },
- 
-  { img: new2_1,  location: "Pizza party",      caption: "Another beautiful memory added to our collection.", fit: "contain" },
-  { img: new2_2,  location: "Happy Moments",    caption: "A smile that deserves a place in our album.", fit: "contain" },
-  { img: new2_3,  location: "Togetherness",     caption: "Every picture feels complete when we're together.", fit: "contain" },
-  { img: new2_4,  location: "Special Click",    caption: "One frame, countless emotions.", fit: "contain" },
-  { img: new2_6,  location: "Pure Happiness",   caption: "A little snapshot of a happy day.", fit: "contain" },
-  { img: new2_10, location: "Beautiful Days",   caption: "A reminder of how lovely simple moments can be.", fit: "contain" },
+  { img: bk4, location: "Best One", caption: "Best with fav person." },
 
-  { img: new2_7,  location: "Favourite Frame",  caption: "Some photos instantly become favourites.", fit: "contain" },
-  { img: new2_8,  location: "Golden Memories",  caption: "Collecting moments, one click at a time.", fit: "contain" },
-  { img: new2_12,  location: "happiness",  caption: "happiness.", fit: "contain" },
-  { img: new2_13,  location: "ride",  caption: "ride.", fit: "contain" },
-  { img: new2_14,  location: "Memories",  caption: "Memories.", fit: "contain" },
+  { img: mk2, location: "Sunset evening", caption: "Sky in colours, hearts at peace." },
+  { img: mk3, location: "Late night drive", caption: "Music low, talks endless, soul full." },
+  { img: atha2, location: "Memories", caption: "A special memory.", fit: "contain" },
 
-  
+  { img: kshyam, location: "Khatu Shyam", caption: "Folded hands, same wish — best friends, forever." },
+
+  { img: bk, location: "Bike Diaries", caption: "Two wheels, two best friends, one endless road." },
+  { img: bk1, location: "Bike Diaries", caption: "Helmet on, smile bigger — ready for the road." },
+  { img: bk2, location: "Morning Vibe", caption: "Morning vibe with closest person." },
+  { img: bk6, location: "Open roads", caption: "Highways, hill curves and us — perfect combo." },
+  { img: bk3, location: "Random stop", caption: "Random pause, big smile — that's how we travel." },
+
+  { img: bk7, location: "Pit stop", caption: "Petrol stop that turned into a photo session." },
+  { img: bk8, location: "Sunset ride", caption: "Sunset, helmet hair and one happy click." },
+  { img: bk10, location: "Mini break", caption: "Pause, breathe, click — repeat." },
+  { img: bk11, location: "Side roads", caption: "Tiny detours that became favourite memories.", fit: "contain" },
+  { img: bk12, location: "Best Pal", caption: "Click before we ride — our little ritual.", fit: "contain" },
+  { img: bk5, location: "Pillion view", caption: "Best seat in the world — right behind him.", fit: "contain" },
+  { img: bk9, location: "Just us", caption: "When the road feels like a friend too.", fit: "contain" },
+  { img: mk, location: "Indore", caption: "A simple click that became a forever favourite.", fit: "contain" },
+
+  { img: mkNew, location: "New Memories", caption: "Fresh clicks, same smiles — making memories all over again.", fit: "contain" },
+  { img: mkNew1, location: "Just Us", caption: "That look — soft, silent, and full of meaning.", fit: "contain" },
+  { img: mkNew2, location: "Soft Moments", caption: "Tiny moments that quietly become the most important ones.", fit: "contain" },
+  { img: mkNew3, location: "Together", caption: "Together feels like the safest place I know.", fit: "contain" },
+  { img: mkNew4, location: "Happy Hours", caption: "Some days, just being with you is the whole plan.", fit: "contain" },
+  { img: mkNew5, location: "Candid", caption: "Unplanned click, perfectly us.", fit: "contain" },
+  { img: mkNew6, location: "Smile File", caption: "Saving this smile for all the bad days.", fit: "contain" },
+  { img: mkNew7, location: "Golden Hour", caption: "Soft light, soft hearts — golden hour magic.", fit: "contain" },
+  { img: mkNew8, location: "Comfort", caption: "You are my comfort place — no other definition needed.", fit: "contain" },
+  { img: mkNew9, location: "Little Things", caption: "Small clicks, big memories — that's our love language.", fit: "contain" },
+  { img: mkNew10, location: "Bestie Mode", caption: "Bestie mode: always ON.", fit: "contain" },
+  { img: mkNew11, location: "Forever Frame", caption: "Some frames you'd want to keep forever — this is one.", fit: "contain" },
+  { img: mkNew12, location: "Pure Joy", caption: "Pure happiness, no filter needed.", fit: "contain" },
+  { img: mkNew13, location: "Our Story", caption: "Adding one more page to our forever story.", fit: "contain" },
+
+  { img: new1_1, location: "Fresh Frames", caption: "A new click added to our forever album.", fit: "contain" },
+  { img: new1_2, location: "Sweet Times", caption: "Some moments quietly become the favourite ones.", fit: "contain" },
+  { img: new1_3, location: "Together Always", caption: "Side by side, just the way it should be.", fit: "contain" },
+  { img: new1_5, location: "Little Joys", caption: "Tiny clicks, big happiness — that's our story.", fit: "contain" },
+  { img: new1_6, location: "Forever Mood", caption: "Pure us — captured in one frame.", fit: "contain" },
+
+  { img: new2_1, location: "Pizza party", caption: "Another beautiful memory added to our collection.", fit: "contain" },
+  { img: new2_2, location: "Happy Moments", caption: "A smile that deserves a place in our album.", fit: "contain" },
+  { img: new2_3, location: "Togetherness", caption: "Every picture feels complete when we're together.", fit: "contain" },
+  { img: new2_4, location: "Special Click", caption: "One frame, countless emotions.", fit: "contain" },
+  { img: new2_6, location: "Pure Happiness", caption: "A little snapshot of a happy day.", fit: "contain" },
+  { img: new2_10, location: "Beautiful Days", caption: "A reminder of how lovely simple moments can be.", fit: "contain" },
+
+  { img: new2_7, location: "Favourite Frame", caption: "Some photos instantly become favourites.", fit: "contain" },
+  { img: new2_8, location: "Golden Memories", caption: "Collecting moments, one click at a time.", fit: "contain" },
+  { img: new2_12, location: "happiness", caption: "happiness.", fit: "contain" },
+  { img: new2_13, location: "ride", caption: "ride.", fit: "contain" },
+  { img: new2_14, location: "Memories", caption: "Memories.", fit: "contain" },
+  { img: atha, location: "Mine", caption: "Beautiful memories.", fit: "contain" },
+  { img: atha4, location: "Memories", caption: "Making memories.", fit: "contain" },
+
+
 ]
-;
+  ;
 
 function Lightbox({ photo, onClose }: { photo: Photo; onClose: () => void }) {
   useEffect(() => {
@@ -260,9 +276,8 @@ function Photos() {
                   src={p.img}
                   alt={p.location}
                   loading="lazy"
-                  className={`absolute inset-0 w-full h-full ${
-                    p.fit === "contain" ? "object-contain" : "object-cover"
-                  } group-hover:scale-105 transition-transform duration-700`}
+                  className={`absolute inset-0 w-full h-full ${p.fit === "contain" ? "object-contain" : "object-cover"
+                    } group-hover:scale-105 transition-transform duration-700`}
                 />
                 <div className="absolute top-2 left-2 md:top-3 md:left-3 px-2.5 py-1 rounded-full bg-background/80 backdrop-blur flex items-center gap-1 text-xs md:text-sm">
                   <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
